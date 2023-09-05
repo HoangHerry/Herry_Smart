@@ -1,0 +1,211 @@
+/* MObile và Tablet */
+@media (max-width: 1023px){
+    .hide_on_tablet{
+        display: none;
+    }
+    .grid.wide {
+        width: 100%;
+        position: relative;
+    }
+    .header_infor {
+        display: none;
+        flex-direction: column;
+        height: 350px;
+        position: absolute;
+        top: 70px;
+        right:0;
+        left: 0;
+        z-index: 2;
+        background-color: #1c1f24;
+    }
+    .header_infor.temp{
+        display: flex;
+    }
+    .header_infor_item {
+        display: flex;
+        justify-content: flex-start;
+        align-items:flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .header_infor_service{
+        flex: 1;
+    }
+    .header_infor_hotline {
+        display:none;
+    }
+    .header_infor_list {
+        width: 100%;
+        flex-direction: column;
+        height: 100%;
+        align-items: flex-start;
+    }
+    .header_infor_list_item {
+        height: 18%;
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        padding: 14px 0;
+    }
+    .header_infor_list_item:hover{
+        background: linear-gradient(to left top, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248));
+        cursor: pointer;
+    }
+    .header_infor_list_item:hover .header_infor_list_link{
+        color: white;
+    }
+    .header_infor_list_link {
+        text-decoration: none;
+        color:white;
+        font-size: 15px; 
+        margin-left: 15px;
+    }
+    .btnlogin {
+        height: 40px;
+        width: 100%;
+        font-weight: 600;
+        font-size: 15px;
+        border-radius: 0px;
+    }
+    .btnlogin:hover{
+        transform: translateY(0px);
+    }  
+/*code header tool */
+.header_tools {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    background-color:#1c1f24;
+    width: 100%;
+    height: 70px;
+    padding: 15px;
+}
+.showmore_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12%;
+}
+.header_logo {
+    display: none;
+}
+.header_search {
+    width: 60%;
+    height: 40px;
+    margin-left: 1.5%;
+}
+
+.header_search_hot {
+    display: none;
+}
+.header_cart {
+    margin-top: 3px;
+    width: 12%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.header_cart:hover{
+    cursor:default; 
+}
+.header_cart::before{
+    right: -4px;
+}
+.icon_cart{
+    position: absolute;
+    z-index: 1;
+    right: 9%;
+}
+
+
+/*Code hiệu ứng */
+/*code hiện thanh tìm kiếm */
+.header_search_bar:focus ~ .header__Search-history{
+    display: block;
+}
+.header__Search-history {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    display: none;
+    width: 91%;
+    background-color: #feffff;
+    box-shadow: 0 1px 5px rgb(172, 172, 172);
+    overflow: hidden;
+    border-radius: 2px;
+}
+.header__Search-history-heading {
+    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    background-clip: text;
+    -webkit-background-clip: text; /* Cho trình duyệt Safari cũ */
+    color: transparent; /* Để chữ trở thành màu trong suốt */
+    margin-left: 10px;
+    margin-top: 8px;
+    margin-bottom: 9px;
+}
+.header__Search-history-list {
+    list-style: none;
+    padding-left: 0;
+}
+.header__Search-history-item {
+    padding: 4px 0;
+}
+.header__Search-history-item:hover {
+    background-color: aliceblue;
+}
+.header__Search-history_link{
+    margin-left: 10px;
+    display: block;
+    text-decoration: none;
+    color: gray;
+    font-size: 12px;
+    margin-bottom: 8px;
+    white-space: nowrap; /* Ngăn chữ xuống dòng */
+    overflow: hidden; /* Ẩn phần dư thừa của nội dung */
+    text-overflow: ellipsis; /* Hiển thị dấu ... khi nội dung bị cắt ngắn */
+}
+
+
+/*code thông báo*/
+
+.header_infor_notify:hover .header__notify{
+    opacity: 1;
+    display: none;
+}
+
+/*Coderheader_cart notify*/
+.header_cart:hover .header_cart_notify{
+    display: none ;
+}
+/*code hiện thanh tìm kiếm */
+.header_search_bar:focus ~ .header__Search-history{
+    display: block;
+    z-index: 1;
+}
+    
+}
+
+/*Tablet*/
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+
+
+
+/*Mobile*/
+@media (max-width: 739px) {
+    .header_search {
+        width: 62px;
+    }
+    .header_infor_list_link {
+        font-size: 13px; 
+    }
+    .btnlogin {
+        font-size: 13px;
+    }
+
+    .header__Search-history {
+        z-index: 1;
+    }
+}

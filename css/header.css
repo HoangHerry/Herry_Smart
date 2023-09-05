@@ -1,5 +1,5 @@
+
 header{
-    background-color: #1c1f24;
 }
 
 .header_infor {
@@ -7,13 +7,15 @@ header{
     justify-content: space-between;
     height: 64px;
 }
+
 .header_infor_item {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .header_infor_service{
-    flex: 0 0 58%;
+    z-index: 4;
+    width: 58%;
 }
 
 .header_infor_hotline {
@@ -30,7 +32,6 @@ header{
 }
 
 .header_infor_list_item {
-    flex: 0 0 20%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +39,7 @@ header{
 
 
 .header_infor_list_item:hover .header_infor_list_link{
-    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    background: linear-gradient(-45deg, #D000F7, #24BAE3);
     background-clip: text;
     -webkit-background-clip: text; 
     color: transparent;
@@ -47,7 +48,12 @@ header{
     text-decoration: none;
     color:white;
     font-size: 14px;
-
+}
+.link_homepage{
+    background: linear-gradient(-45deg, #D000F7, #24BAE3);
+    background-clip: text;
+    -webkit-background-clip: text; 
+    color: transparent;
 }
 @keyframes colorShift {
     0% {
@@ -58,23 +64,24 @@ header{
     }
   }
 .header_infor_account{
-    flex: 0 0 15%;
+    width: 15%;
     justify-content: flex-end;
 }
 .btnlogin {
-    background: linear-gradient(to left top, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248));
+    background: linear-gradient(-45deg, #D000F7, #24BAE3);
     border: none;
     border-radius: 4px;
     height: 32px;
     width: 50%;
     transition: .5s;
     text-decoration: none;
-    color: #1c1f24;
+    color: white;
     font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 2px;
+    box-shadow: 1.5px 4px 10px rgba(208, 0, 247, 0.7);
 }
 .btnlogin:hover{
     opacity: 0.6;
@@ -91,6 +98,10 @@ header{
     justify-content: space-between;
     height: 100px;
 }
+#btn_showmore_info{
+    display: none;
+}
+
 .header_logo {
     height: 200px;
     width: 18%;
@@ -107,7 +118,8 @@ header{
     object-fit: contain;
 }
 .header_search {
-    flex: 0 0 60%;
+    z-index: 3;
+    width: 60%;
     margin-left: -3%;
     height: 40px;
     display: flex;
@@ -116,6 +128,8 @@ header{
     position: relative;
     flex-wrap: wrap;
 }
+
+
 .header_search_bar {
     border-radius: 5px;
     border: none;
@@ -123,10 +137,11 @@ header{
     width: 100%;
     color: grey;
     padding-left: 10px;
+    z-index: 3;
 }
 .header_search_btn {
     text-decoration: none;
-    background: linear-gradient(to left top, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248));
+    background: linear-gradient(-45deg, #D000F7, #24BAE3);
     display: flex;
     border: none;
     justify-content: center;
@@ -134,8 +149,9 @@ header{
     height: 38px;
     width: 60px;
     position: absolute;
-    right: 0.5%;
+    right: 0.2%;
     border-radius: 4px;
+    z-index: 3;
 }
 .header_search_btn:hover {
     opacity: 0.6;
@@ -171,10 +187,12 @@ header{
 .header_cart {
     margin-top: 3px;
     margin-right: 3%;
-    flex: 0 0 12%;
+    width:12%;
     display: flex;
     justify-content: flex-end;
     position: relative;
+    z-index: 3;
+
 }
 .header_cart:hover{
     cursor: pointer; 
@@ -208,6 +226,7 @@ header{
     display: block;
 }
 .header__Search-history {
+    z-index: 3;
     position: absolute;
     top: 42px;
     left: 0;
@@ -334,7 +353,7 @@ header{
     
 }
 .header__notify-item:hover{
-    background: radial-gradient(at right top, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248));
+    background: linear-gradient(to left top, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248));
     transition: 0.2s;
 }
 
@@ -387,6 +406,7 @@ header{
     display: flex ;
 }
 .header_cart_notify {
+    z-index: 3;
     position: absolute;
     background-color: whitesmoke;
     top:54px;
@@ -419,7 +439,7 @@ header{
    top: -16px; 
 }
 .header_cart_notify_title {
-    flex: 0 0 10%;
+    height: 10%;
     color: gray;
     font-size: 15px;
     font-weight: 300;
@@ -436,7 +456,7 @@ header{
     flex-direction: column;
 }
 .header_cart_notify_item {
-    flex: 0 0 25%;
+    height:25%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -454,12 +474,10 @@ header{
 }
 .header_cart_img_product {
     object-fit: contain;
-    flex: 0 0 15%;
     width: 15%;
 }
 .header_cart_name_product {
-    flex: 0 0 60%;
-    width: 50%;
+    width: 60%;
     font-size: 14px;
     font-weight: 500;
     color: #1c1f24;
@@ -469,7 +487,7 @@ header{
     
 }
 .header_cart_cost_product {
-    flex: 0 0 18%;
+    width: 18%;
     font-weight: 400;
     font-size: 13px;
     background: linear-gradient(45deg, #ff00cc, #3333ff);
@@ -478,7 +496,7 @@ header{
     color: transparent;
 }
 .header_cart_notify_showmore {
-    flex: 0 0 13%;
+    height:  13%;
     display: flex;
     align-items: center;
     padding: 0 10px;
@@ -496,7 +514,7 @@ header{
     border-radius: 3px;
     border: none;
     padding: 10px 0;
-    background: linear-gradient(to left top, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248));
+    background: linear-gradient(-45deg, #D000F7, #24BAE3);
 }
 .header_cart_notify_view_showmore:hover {
     opacity: 0.7;
